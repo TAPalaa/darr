@@ -1,0 +1,370 @@
+.book-of-week-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(6, 95, 70, 0.05) 0%, rgba(16, 185, 129, 0.1) 100%);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-of-week-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+      rgba(52, 211, 153, 0) 0%, 
+      rgba(52, 211, 153, 0.8) 50%, 
+      rgba(52, 211, 153, 0) 100%);
+}
+
+.book-of-week-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+      rgba(52, 211, 153, 0) 0%, 
+      rgba(52, 211, 153, 0.8) 50%, 
+      rgba(52, 211, 153, 0) 100%);
+}
+
+.book-of-week-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.book-of-week-badge {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  background: linear-gradient(135deg, #10b981, #065f46);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 0 0 15px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(6, 95, 70, 0.3);
+  z-index: 2;
+}
+
+.book-of-week-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.book-of-week-image {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.image-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-of-week-content:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+}
+
+.book-discount-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+  z-index: 2;
+}
+
+.book-of-week-details {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-of-week-details h2 {
+  font-size: 2.2rem;
+  color: #065f46;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+  margin-left: 10px;
+}
+
+.star {
+  color: #d1d5db;
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.rating-value {
+  font-weight: 700;
+  color: #065f46;
+  margin-left: 5px;
+}
+
+.review-count {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.book-description {
+  margin-bottom: 25px;
+  line-height: 1.7;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+.book-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.meta-value {
+  font-weight: 600;
+  color: #374151;
+}
+
+.book-price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.current-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+.original-price {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+  margin-right: 15px;
+}
+
+.book-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.view-details-btn {
+  background-color: white;
+  color: #065f46;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #10b981;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-details-btn:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateY(-3px);
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #10b981, #065f46);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(6, 95, 70, 0.2);
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(6, 95, 70, 0.3);
+  background: linear-gradient(135deg, #059669, #064e3b);
+}
+
+.cart-icon {
+  font-size: 1.2rem;
+}
+
+.countdown-timer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(6, 95, 70, 0.2);
+}
+
+.countdown-timer p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.timer-units {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-value {
+  background: linear-gradient(135deg, #10b981, #065f46);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(6, 95, 70, 0.2);
+  margin-bottom: 5px;
+}
+
+.time-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* تجاوب مع الشاشات المختلفة */
+@media (max-width: 992px) {
+  .book-of-week-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-of-week-image {
+    min-height: 300px;
+  }
+  
+  .book-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .book-price-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .book-actions {
+    width: 100%;
+  }
+  
+  .view-details-btn,
+  .add-to-cart-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-of-week-details {
+    padding: 20px;
+  }
+  
+  .book-of-week-details h2 {
+    font-size: 1.8rem;
+  }
+  
+  .book-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .timer-units {
+    gap: 10px;
+  }
+  
+  .time-value {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
